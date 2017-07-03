@@ -1,6 +1,8 @@
 package org.exampledriven.springboottestingworkshop.client;
 
 import org.exampledriven.springboottestingworkshop.domain.Post;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.ParameterizedTypeReference;
@@ -16,6 +18,8 @@ import java.util.List;
 @Component
 public class PostClient {
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     private final RestTemplate restTemplate;
 
     public PostClient(RestTemplateBuilder restTemplateBuilder) {
@@ -26,6 +30,9 @@ public class PostClient {
     private String url;
 
     public List<Post> readPosts(int userId) {
+
+        logger.debug("Calling " + url + "with " + userId);
+
         return restTemplate.exchange(
                 url,
                 HttpMethod.GET,
