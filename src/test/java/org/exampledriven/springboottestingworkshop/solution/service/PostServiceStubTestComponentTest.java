@@ -20,7 +20,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Peter_Szanto on 7/3/2017.
+ * Created by Peter Szanto on 7/3/2017.
  */
 
 @RunWith(SpringRunner.class)
