@@ -11,6 +11,7 @@ The presentation is on [prezi.com](https://prezi.com/nyyggekgq18l/spring-boot-te
 
 In this repo each commit adds a new technology and demonstrates how to test it. This covers : 
 * JPA
+* JDBC
 * RestClient
 * Service
 * Controller
